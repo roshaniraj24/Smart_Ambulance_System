@@ -1,0 +1,102 @@
+.active-incidents {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.incidents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.incident-card {
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: none;
+  cursor: default;
+}
+
+.incident-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.incident-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.incident-id {
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.priority-badge {
+  color: #111827;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  text-transform: none;
+  background-color: transparent;
+}
+
+.incident-details h4 {
+  margin: 0 0 8px 0;
+  color: #111827;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.location {
+  margin: 0 0 15px 0;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.incident-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.time-elapsed, .ambulance-assigned {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #374151;
+  font-size: 0.85rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: normal;
+  text-align: center;
+  background-color: transparent;
+  color: #111827;
+}
+
+/* Custom scrollbar */
+.active-incidents::-webkit-scrollbar {
+  width: 6px;
+}
+
+.active-incidents::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+
+.active-incidents::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 3px;
+}

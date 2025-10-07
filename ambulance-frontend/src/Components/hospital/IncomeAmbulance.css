@@ -1,0 +1,195 @@
+.incoming-ambulances {
+          max-height: 400px;
+          overflow-y: auto;
+        }
+
+        .no-ambulances {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 40px;
+          color: #718096;
+        }
+
+        .no-ambulances-icon {
+          font-size: 3rem;
+          margin-bottom: 10px;
+        }
+
+        .ambulances-list {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .ambulance-card {
+          background: rgba(255, 255, 255, 0.9);
+          border: 2px solid #e2e8f0;
+          border-radius: 12px;
+          padding: 20px;
+          transition: all 0.3s ease;
+        }
+
+        .ambulance-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .ambulance-card.accepted {
+          border-color: #10b981;
+          background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(255, 255, 255, 0.9));
+        }
+
+        .ambulance-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+        }
+
+        .ambulance-id {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 1.1rem;
+          color: #2d3748;
+        }
+
+        .vehicle-icon {
+          font-size: 1.2rem;
+        }
+
+        .priority-badge {
+          color: white;
+          padding: 4px 12px;
+          border-radius: 15px;
+          font-size: 0.8rem;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+
+        .patient-info {
+          margin-bottom: 15px;
+        }
+
+        .patient-info h4 {
+          margin: 0 0 5px 0;
+          color: #2d3748;
+          font-size: 1.1rem;
+        }
+
+        .location {
+          margin: 0;
+          color: #718096;
+          font-size: 0.9rem;
+        }
+
+        .vitals-preview {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 15px;
+          padding: 10px;
+          background: rgba(0, 0, 0, 0.05);
+          border-radius: 8px;
+        }
+
+        .vital-item {
+          font-size: 0.85rem;
+          font-weight: 500;
+          color: #4a5568;
+        }
+
+        .eta-section {
+          margin-bottom: 15px;
+        }
+
+        .eta-display {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 10px;
+          background: linear-gradient(135deg, #e6fffa, #b2f5ea);
+          border-radius: 8px;
+        }
+
+        .eta-label {
+          font-weight: 600;
+          color: #2d3748;
+        }
+
+        .eta-time {
+          font-weight: bold;
+          font-size: 1.1rem;
+          color: #0f766e;
+        }
+
+        .eta-time.urgent {
+          color: #dc2626;
+          animation: pulse-urgent 1s infinite;
+        }
+
+        .action-buttons {
+          display: flex;
+          gap: 10px;
+        }
+
+        .accept-btn, .reject-btn {
+          flex: 1;
+          padding: 12px;
+          border: none;
+          border-radius: 8px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .accept-btn {
+          background: linear-gradient(135deg, #10b981, #059669);
+          color: white;
+        }
+
+        .accept-btn:hover {
+          background: linear-gradient(135deg, #059669, #047857);
+          transform: translateY(-1px);
+        }
+
+        .reject-btn {
+          background: linear-gradient(135deg, #ef4444, #dc2626);
+          color: white;
+        }
+
+        .reject-btn:hover {
+          background: linear-gradient(135deg, #dc2626, #b91c1c);
+          transform: translateY(-1px);
+        }
+
+        .accepted-status {
+          text-align: center;
+          padding: 12px;
+          background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+          border-radius: 8px;
+          color: #065f46;
+          font-weight: bold;
+        }
+
+        @keyframes pulse-urgent {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.7; }
+        }
+
+        /* Custom scrollbar */
+        .incoming-ambulances::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        .incoming-ambulances::-webkit-scrollbar-track {
+          background: #f1f5f9;
+          border-radius: 3px;
+        }
+
+        .incoming-ambulances::-webkit-scrollbar-thumb {
+          background: #cbd5e1;
+          border-radius: 3px;
+        }

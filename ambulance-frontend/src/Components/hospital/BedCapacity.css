@@ -1,0 +1,88 @@
+.capacity-overview {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+        }
+
+        .capacity-item {
+          background: rgba(255, 255, 255, 0.8);
+          border-radius: 12px;
+          padding: 20px;
+          border: 2px solid #e2e8f0;
+          transition: all 0.3s ease;
+        }
+
+        .capacity-item:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .capacity-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 15px;
+        }
+
+        .capacity-icon {
+          font-size: 1.5rem;
+        }
+
+        .capacity-header h4 {
+          margin: 0;
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #2d3748;
+        }
+
+        .capacity-stats {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .bed-count {
+          display: flex;
+          align-items: baseline;
+          gap: 5px;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+
+        .occupied {
+          color: #e53e3e;
+        }
+
+        .divider {
+          color: #718096;
+        }
+
+        .total {
+          color: #2d3748;
+        }
+
+        .capacity-bar {
+          width: 100%;
+          height: 8px;
+          background: #e2e8f0;
+          border-radius: 4px;
+          overflow: hidden;
+        }
+
+        .capacity-fill {
+          height: 100%;
+          border-radius: 4px;
+          transition: width 1s ease;
+          animation: fill-animation 2s ease-out;
+        }
+
+        .percentage {
+          font-size: 0.9rem;
+          color: #718096;
+          font-weight: 500;
+          text-align: center;
+        }
+
+        @keyframes fill-animation {
+          0% { width: 0%; }
+        }

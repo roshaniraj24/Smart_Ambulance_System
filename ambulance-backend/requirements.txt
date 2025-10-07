@@ -1,0 +1,16 @@
+Django==4.2.7
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+python-decouple==3.8
+Pillow
+django-extensions==3.2.3
+requests==2.31.0
+twilio==8.10.0
+sendgrid==6.10.0
+django-rest-auth==0.9.5
+django-allauth==0.57.0
+celery==5.3.4
+redis==5.0.1
+python-dotenv==1.0.0
+cryptography==41.0.8
+PyJWT==2.8.0

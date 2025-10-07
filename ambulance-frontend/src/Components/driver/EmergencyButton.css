@@ -1,0 +1,118 @@
+.emergency-controls {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .panic-button {
+          position: relative;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          border: none;
+          background: linear-gradient(135deg, #ef4444, #dc2626);
+          color: white;
+          font-size: 1.2rem;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          overflow: hidden;
+          box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+        }
+
+        .panic-button:hover:not(:disabled) {
+          transform: scale(1.05);
+          box-shadow: 0 12px 35px rgba(239, 68, 68, 0.6);
+        }
+
+        .panic-button:active {
+          transform: scale(0.95);
+        }
+
+        .panic-button.pressed {
+          background: linear-gradient(135deg, #10b981, #059669);
+          animation: success-pulse 2s infinite;
+        }
+
+        .panic-button.loading {
+          animation: loading-pulse 1s infinite;
+        }
+
+        .panic-button:disabled {
+          cursor: not-allowed;
+          opacity: 0.8;
+        }
+
+        .button-content {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .emergency-icon {
+          font-size: 2.5rem;
+          animation: emergency-blink 1s infinite;
+        }
+
+        .button-text {
+          text-align: center;
+          line-height: 1.2;
+        }
+
+        .button-glow {
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(circle, rgba(239, 68, 68, 0.3), transparent);
+          animation: glow-rotate 4s linear infinite;
+          z-index: 1;
+        }
+
+        .emergency-info {
+          text-align: center;
+          color: #718096;
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+
+        .emergency-info p {
+          margin: 0;
+        }
+
+        @keyframes emergency-blink {
+          0%, 50% { opacity: 1; }
+          51%, 100% { opacity: 0.3; }
+        }
+
+        @keyframes success-pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.02); }
+        }
+
+        @keyframes loading-pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.7; }
+        }
+
+        @keyframes glow-rotate {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+          .panic-button {
+            width: 160px;
+            height: 160px;
+            font-size: 1rem;
+          }
+
+          .emergency-icon {
+            font-size: 2rem;
+          }
+        }
