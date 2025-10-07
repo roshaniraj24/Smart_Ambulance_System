@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Smart Ambulance System
 
 ## Overview
@@ -64,3 +65,7 @@ This project is a comprehensive smart ambulance system with role-based dashboard
 
 ### Building for Production
 - Frontend: `npm run build`
+=======
+# Smart_Ambulance_System
+Smart Ambulance System – A web-based platform with role-based login for drivers, hospitals, and admins, enabling real-time ambulance tracking, patient monitoring, and faster emergency response.
+>>>>>>> c55016d00b48fcee489545263c49d2cfecb75f0c
